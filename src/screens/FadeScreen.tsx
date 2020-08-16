@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import {Button, StyleSheet, View} from "react-native";
 import Animated, {
     add,
-    Clock,
     cond,
     eq,
     Extrapolate,
     interpolate,
-    not, proc,
+    not,
+    proc,
     set,
     startClock,
     useCode,
@@ -17,7 +17,7 @@ import Card, {cards} from "../components/Card"
 import {useClock, useValues} from "react-native-redash";
 
 
-const CardScreen = () => {
+const FadeScreen = () => {
     const [show, setShow] = useState(true);
 
     console.log('rerender on show change : ', show);
@@ -42,7 +42,7 @@ const CardScreen = () => {
         ])
     );
 
-    const clock = useClock([]);
+    const clock = useClock();
     const startAnimation = new Value(1);
     const [startTime, from, to] = useValues(0, 0, 0);
     const endTime = add(startTime, duration);
@@ -71,7 +71,7 @@ const CardScreen = () => {
             </View>
         </View>
     )
-}
+};
 
 
 const styles = StyleSheet.create({
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default CardScreen;
+export default FadeScreen;

@@ -1,19 +1,20 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from "react-native";
-import {useNavigation} from '@react-navigation/native'
+import {StyleSheet, View} from "react-native";
+import MainMenuButton from "../components/MainMenuButton";
 
 
 const MainScreen = () => {
-    const navigation = useNavigation();
+
 
     return (
         <View style={styles.container}>
-            <Text>MAIN SCREEN</Text>
-            <Button onPress={() => navigation.navigate("CardScreen")}
-                    title={"Card"}/>
+            <MainMenuButton buttonText={"Fading card animation"}
+                            navigationSource={"FadeScreen"}/>
+            <MainMenuButton buttonText={"Card transitions"}
+                            navigationSource={"TransitionScreen"}/>
         </View>
     )
-}
+};
 
 
 const styles = StyleSheet.create({
@@ -22,6 +23,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        borderWidth: 2,
+        borderColor: 'green'
     },
 });
 

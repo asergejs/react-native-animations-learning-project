@@ -59,7 +59,7 @@ const wrap: Layout = {
 };
 
 const layouts = [column, row, wrap];
-const transition = <Transition.Change durationMs={400} interpolation="easeInOut"/>;
+const transition = <Transition.Change durationMs={400} interpolation="easeIn"/>;
 
 const TransitionsScreen = () => {
     const ref = useRef<TransitioningView>(null);

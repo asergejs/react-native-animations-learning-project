@@ -12,6 +12,10 @@ const MainScreen = () => {
                             navigationSource={"FadeScreen"}/>
             <MainMenuButton buttonText={"Card transitions"}
                             navigationSource={"TransitionScreen"}/>
+            <MainMenuButton buttonText={"Progress transition example"}
+                            navigationSource={"Progress"}/>
+            <MainMenuButton buttonText={"Sequence transition example"}
+                            navigationSource={"Sequence"}/>
         </View>
     )
 };

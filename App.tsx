@@ -6,6 +6,7 @@ import FadeScreen from "./src/screens/FadeScreen";
 import TransitionScreen from "./src/screens/TransitionsScreen";
 import Progress from "./src/screens/examples/Progress";
 import Sequence from "./src/screens/examples/Sequence";
+import Shuffle from "./src/screens/examples/Shuffle";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,8 @@ export default function App() {
                               component={Progress}/>
                 <Stack.Screen name="Sequence"
                               component={Sequence}/>
+                <Stack.Screen name="Shuffle"
+                              component={Shuffle}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

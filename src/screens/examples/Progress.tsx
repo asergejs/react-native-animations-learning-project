@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
-import { Text, View, StyleSheet, Button, StatusBar } from 'react-native';
-import { Transitioning, Transition } from 'react-native-reanimated';
+import React, {useRef, useState} from 'react';
+import {Button, StyleSheet, View} from 'react-native';
+import {Transition, Transitioning, TransitioningView} from 'react-native-reanimated';
 
 function Progress() {
     const transition = <Transition.Change interpolation="easeInOut" />;
 
-    let [perc, setPerc] = useState(20);
-    const ref = useRef();
+    let [perc, setPerc] = useState<number>(20);
+    const ref = useRef<TransitioningView>(null);
 
     return (
         <Transitioning.View
@@ -17,6 +17,7 @@ function Progress() {
                 title={perc + 20 <= 100 ? '+20%' : '-80%'}
                 color="#FF5252"
                 onPress={() => {
+                    // @ts-ignore
                     ref.current.animateNextTransition();
                     setPerc(perc + 20 <= 100 ? perc + 20 : 20);
                 }}

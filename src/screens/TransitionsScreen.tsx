@@ -1,5 +1,5 @@
 import React, {useRef, useState} from "react";
-import {Dimensions, ImageStyle, StyleSheet, View, ViewStyle} from "react-native";
+import {Dimensions, ImageStyle, StyleSheet, ViewStyle} from "react-native";
 
 import {cards, FlexibleCard as Card} from "../components/Card";
 import Selection from "../components/Selection";

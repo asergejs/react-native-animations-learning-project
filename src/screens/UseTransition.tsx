@@ -33,6 +33,7 @@ const transformOrigin = -1 * (width / 2 - 8 * 2);
 
 const UseTransition = () => {
     const [toggled, setToggled] = useState<0 | 1>(0);
+    // @ts-ignore
     const transition = useTransition(toggled, not(toggled), toggled);
     return (
         <>

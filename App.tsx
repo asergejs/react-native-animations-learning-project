@@ -6,6 +6,7 @@ import {Progress} from "./src/screens/examples";
 import Sequence from "./src/screens/examples/Sequence";
 import Shuffle from "./src/screens/examples/Shuffle";
 import {FadeScreen, TransitionScreen, UseTransition} from "./src/screens";
+import ButtonAppear from "./src/screens/examples/ButtonAppear";
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,8 @@ export default function App() {
                               component={Shuffle}/>
                 <Stack.Screen name="UseTransition"
                               component={UseTransition}/>
+                <Stack.Screen name="ButtonAppear"
+                              component={ButtonAppear}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

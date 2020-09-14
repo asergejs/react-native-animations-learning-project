@@ -20,6 +20,8 @@ const MainScreen = () => {
                             navigationSource={"Shuffle"}/>
             <MainMenuButton buttonText={"Use transition example"}
                             navigationSource={"UseTransition"}/>
+            <MainMenuButton buttonText={"Button appear example"}
+                            navigationSource={"ButtonAppear"}/>
         </View>
     )
 };
